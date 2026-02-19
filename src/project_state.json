@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Romantic interactive birthday microsite with intro animation, question flow, and animated letter reveal",
   "architectural_notes": [
     "Single HTML file architecture with embedded CSS and JavaScript",
@@ -11,8 +11,16 @@
     "Audio: UI click sounds + background Tamil romantic music (royalty-free)",
     "Mute/unmute control for background music"
   ],
-  "known_issues": [],
-  "isFixRequest": false,
+  "known_issues": [
+    "Red lipstick kiss marks not visible on letter background",
+    "Background music not playing or missing",
+    "Design appears too childish/pink-heavy",
+    "Missing firecracker burst animation",
+    "Missing bouquet giving animation",
+    "Butterfly animations not present or not flying"
+  ],
+  "isFixRequest": true,
+  "imageRequirements": "## Required Images\n- Elegant bouquet of roses illustration in mature romantic style with reds, whites and gold accents (bouquet.dim_800x800.png)",
   "existing_features": [
     {
       "id": "feature-create-a-single-file-index-html-romantic-birthday-microsite-with-mobile-responsive-centered-layout-elegant-soft-red-and-pink-gradient-background-subtle-floating-heart-particles-butterflies-roses-and-subtle-floating-ring-animations-with-smooth-romantic-style-motion",
@@ -61,12 +69,78 @@
         "REQ-6"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-visible-red-lipstick-kiss-mark-pattern-to-the-letter-background-that-decorates-the-paper-texture-without-obscuring-the-letter-text",
+      "title": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-royalty-free-romantic-background-music-that-plays-after-the-envelope-opens",
+      "title": "Integrate royalty-free romantic background music that plays after the envelope opens",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-redesign-color-scheme-from-predominantly-pink-to-a-mature-romantic-aesthetic-with-varied-elegant-colors-including-reds-golds-deep-purples-and-whites-while-maintaining-romantic-feel",
+      "title": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-firecracker-burst-animation-at-intro-screen-to-be-more-dramatic-and-realistic-with-particle-effects-and-sound",
+      "title": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-animated-bouquet-giving-sequence-that-plays-after-the-question-flow-and-before-or-during-the-envelope-reveal",
+      "title": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-flying-butterfly-animations-throughout-the-microsite-with-natural-flight-patterns-and-wing-movements",
+      "title": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
     {
       "id": "AR-1",
       "summary": "Single HTML file romantic birthday microsite with animations, question flow, and music",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Fix missing red lipstick kiss marks on letter background",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add royalty-free background music (currently missing)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Replace childish pink design with mature romantic aesthetic including crackers burst animation, bouquet giving animation, and flying butterflies",
       "reqIds": [],
       "status": "pending"
     }

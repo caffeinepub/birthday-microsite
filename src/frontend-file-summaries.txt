@@ -1,4 +1,4 @@
 {
-  "frontend/index.html": "Complete self-contained romantic birthday microsite with intro animation, question flow, envelope reveal, and letter display featuring elegant animations, floating particles, and background music control.",
+  "frontend/index.html": "Complete self-contained romantic birthday microsite with mature dark aesthetic featuring enhanced firecracker bursts, flying butterflies with wing animations, bouquet presentation sequence, red lipstick kiss marks on letter, royalty-free background music, sophisticated color palette (deep reds, golds, purples), and elegant animations throughout the question flow, envelope reveal, and letter display.",
   "frontend/src/App.tsx": "Minimal placeholder component that displays a message directing users to open the standalone index.html file for the birthday microsite experience."
 }

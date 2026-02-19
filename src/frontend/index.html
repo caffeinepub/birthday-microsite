@@ -18,11 +18,11 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             background: linear-gradient(135deg, 
-                oklch(0.85 0.15 15) 0%,
-                oklch(0.75 0.18 350) 25%,
-                oklch(0.80 0.16 5) 50%,
-                oklch(0.78 0.17 355) 75%,
-                oklch(0.82 0.14 10) 100%);
+                oklch(0.25 0.08 350) 0%,
+                oklch(0.20 0.10 10) 25%,
+                oklch(0.30 0.06 280) 50%,
+                oklch(0.22 0.09 340) 75%,
+                oklch(0.28 0.07 320) 100%);
             background-attachment: fixed;
             min-height: 100vh;
             position: relative;
@@ -47,13 +47,6 @@
             animation: floatHeart 15s infinite ease-in-out;
         }
 
-        .butterfly {
-            position: absolute;
-            font-size: 28px;
-            opacity: 0.7;
-            animation: floatButterfly 20s infinite ease-in-out;
-        }
-
         .rose {
             position: absolute;
             font-size: 24px;
@@ -75,13 +68,6 @@
             75% { transform: translateY(-30px) translateX(15px) rotate(8deg); }
         }
 
-        @keyframes floatButterfly {
-            0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
-            25% { transform: translateY(-50px) translateX(30px) rotate(15deg); }
-            50% { transform: translateY(-100px) translateX(-20px) rotate(-10deg); }
-            75% { transform: translateY(-50px) translateX(25px) rotate(12deg); }
-        }
-
         @keyframes floatRose {
             0%, 100% { transform: translateY(0) translateX(0) rotate(0deg); }
             33% { transform: translateY(-40px) translateX(-25px) rotate(-8deg); }
@@ -91,6 +77,84 @@
         @keyframes floatRing {
             0%, 100% { transform: translateY(0) translateX(0) rotate(0deg) scale(1); }
             50% { transform: translateY(-70px) translateX(20px) rotate(180deg) scale(1.1); }
+        }
+
+        /* Butterfly animations */
+        .butterfly {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            z-index: 100;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .butterfly svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .butterfly-1 {
+            animation: flyButterfly1 25s infinite ease-in-out;
+        }
+
+        .butterfly-2 {
+            animation: flyButterfly2 30s infinite ease-in-out 3s;
+        }
+
+        .butterfly-3 {
+            animation: flyButterfly3 28s infinite ease-in-out 6s;
+        }
+
+        .butterfly-4 {
+            animation: flyButterfly4 32s infinite ease-in-out 9s;
+        }
+
+        @keyframes flyButterfly1 {
+            0% { left: -10%; top: 20%; }
+            25% { left: 30%; top: 40%; }
+            50% { left: 70%; top: 25%; }
+            75% { left: 50%; top: 60%; }
+            100% { left: 110%; top: 35%; }
+        }
+
+        @keyframes flyButterfly2 {
+            0% { left: 110%; top: 70%; }
+            25% { left: 70%; top: 50%; }
+            50% { left: 40%; top: 80%; }
+            75% { left: 60%; top: 30%; }
+            100% { left: -10%; top: 60%; }
+        }
+
+        @keyframes flyButterfly3 {
+            0% { left: 50%; top: -10%; }
+            25% { left: 20%; top: 35%; }
+            50% { left: 80%; top: 55%; }
+            75% { left: 30%; top: 75%; }
+            100% { left: 60%; top: 110%; }
+        }
+
+        @keyframes flyButterfly4 {
+            0% { left: 20%; top: 110%; }
+            25% { left: 60%; top: 70%; }
+            50% { left: 25%; top: 45%; }
+            75% { left: 75%; top: 65%; }
+            100% { left: 40%; top: -10%; }
+        }
+
+        .butterfly-wing-left,
+        .butterfly-wing-right {
+            animation: flapWings 0.3s infinite ease-in-out;
+            transform-origin: center;
+        }
+
+        .butterfly-wing-right {
+            animation-delay: 0.15s;
+        }
+
+        @keyframes flapWings {
+            0%, 100% { transform: scaleX(1); }
+            50% { transform: scaleX(0.7); }
         }
 
         /* Screen container */
@@ -119,7 +183,7 @@
         .firecracker-container {
             position: relative;
             width: 100%;
-            height: 200px;
+            height: 250px;
             margin-bottom: 40px;
         }
 
@@ -128,24 +192,37 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
         }
 
         .spark {
             position: absolute;
-            width: 4px;
-            height: 4px;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            background: oklch(0.95 0.2 30);
             top: 50%;
             left: 50%;
-            animation: burst 1.5s ease-out forwards;
+            box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+            animation: burst 2s ease-out forwards;
+        }
+
+        .spark::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: inherit;
+            filter: blur(4px);
         }
 
         @keyframes burst {
             0% {
                 transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            20% {
                 opacity: 1;
             }
             100% {
@@ -157,11 +234,16 @@
         .birthday-text {
             font-family: 'Great Vibes', cursive;
             font-size: clamp(2.5rem, 8vw, 5rem);
-            color: oklch(0.95 0.2 350);
+            background: linear-gradient(135deg, 
+                oklch(0.85 0.20 350),
+                oklch(0.90 0.18 40),
+                oklch(0.88 0.19 10));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-align: center;
-            text-shadow: 0 0 20px oklch(0.85 0.25 350 / 0.6),
-                         0 0 40px oklch(0.85 0.25 350 / 0.4),
-                         0 0 60px oklch(0.85 0.25 350 / 0.2);
+            filter: drop-shadow(0 0 20px oklch(0.85 0.25 350 / 0.6))
+                    drop-shadow(0 0 40px oklch(0.85 0.25 350 / 0.4));
             animation: glow 2s ease-in-out infinite alternate;
             margin-bottom: 60px;
             line-height: 1.3;
@@ -169,14 +251,12 @@
 
         @keyframes glow {
             from {
-                text-shadow: 0 0 20px oklch(0.85 0.25 350 / 0.6),
-                             0 0 40px oklch(0.85 0.25 350 / 0.4),
-                             0 0 60px oklch(0.85 0.25 350 / 0.2);
+                filter: drop-shadow(0 0 20px oklch(0.85 0.25 350 / 0.6))
+                        drop-shadow(0 0 40px oklch(0.85 0.25 350 / 0.4));
             }
             to {
-                text-shadow: 0 0 30px oklch(0.85 0.25 350 / 0.8),
-                             0 0 50px oklch(0.85 0.25 350 / 0.6),
-                             0 0 80px oklch(0.85 0.25 350 / 0.4);
+                filter: drop-shadow(0 0 30px oklch(0.85 0.25 350 / 0.8))
+                        drop-shadow(0 0 50px oklch(0.85 0.25 350 / 0.6));
             }
         }
 
@@ -186,13 +266,17 @@
             font-size: clamp(1rem, 3vw, 1.3rem);
             font-weight: 500;
             padding: 18px 45px;
-            background: linear-gradient(135deg, oklch(0.75 0.22 350), oklch(0.70 0.20 10));
+            background: linear-gradient(135deg, 
+                oklch(0.45 0.20 350),
+                oklch(0.50 0.18 10),
+                oklch(0.48 0.19 340));
             color: oklch(0.98 0 0);
-            border: none;
+            border: 2px solid oklch(0.60 0.15 40 / 0.5);
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 8px 25px oklch(0.70 0.20 350 / 0.4),
-                        0 0 30px oklch(0.75 0.22 350 / 0.3);
+            box-shadow: 0 8px 25px oklch(0.45 0.20 350 / 0.5),
+                        0 0 30px oklch(0.50 0.18 10 / 0.3),
+                        inset 0 1px 0 oklch(0.60 0.15 40 / 0.3);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -206,15 +290,16 @@
             width: 0;
             height: 0;
             border-radius: 50%;
-            background: oklch(0.95 0.15 350 / 0.3);
+            background: oklch(0.70 0.15 40 / 0.3);
             transform: translate(-50%, -50%);
             transition: width 0.6s, height 0.6s;
         }
 
         .romantic-button:hover {
             transform: scale(1.08);
-            box-shadow: 0 12px 35px oklch(0.70 0.20 350 / 0.6),
-                        0 0 50px oklch(0.75 0.22 350 / 0.5);
+            box-shadow: 0 12px 35px oklch(0.45 0.20 350 / 0.7),
+                        0 0 50px oklch(0.50 0.18 10 / 0.5);
+            border-color: oklch(0.70 0.18 40);
         }
 
         .romantic-button:hover::before {
@@ -236,19 +321,22 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(1.5rem, 5vw, 2.5rem);
             font-weight: 600;
-            color: oklch(0.30 0.15 350);
+            color: oklch(0.95 0.10 40);
             margin-bottom: 50px;
             line-height: 1.5;
-            text-shadow: 0 2px 10px oklch(0.95 0.1 350 / 0.3);
+            text-shadow: 0 2px 10px oklch(0.50 0.15 350 / 0.5),
+                         0 4px 20px oklch(0.60 0.18 40 / 0.3);
             animation: questionGlow 3s ease-in-out infinite alternate;
         }
 
         @keyframes questionGlow {
             from {
-                text-shadow: 0 2px 10px oklch(0.95 0.1 350 / 0.3);
+                text-shadow: 0 2px 10px oklch(0.50 0.15 350 / 0.5),
+                             0 4px 20px oklch(0.60 0.18 40 / 0.3);
             }
             to {
-                text-shadow: 0 4px 20px oklch(0.95 0.15 350 / 0.5);
+                text-shadow: 0 4px 20px oklch(0.50 0.15 350 / 0.7),
+                             0 6px 30px oklch(0.60 0.18 40 / 0.5);
             }
         }
 
@@ -257,6 +345,69 @@
             flex-direction: column;
             gap: 20px;
             align-items: center;
+        }
+
+        /* Bouquet animation */
+        .bouquet-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 500;
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .bouquet-container.show {
+            animation: showBouquet 4s ease-in-out forwards;
+        }
+
+        @keyframes showBouquet {
+            0% {
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .bouquet-image {
+            width: 80%;
+            max-width: 400px;
+            height: auto;
+            animation: presentBouquet 4s ease-in-out forwards;
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+        }
+
+        @keyframes presentBouquet {
+            0% {
+                transform: translateY(100vh) scale(0.5) rotate(-15deg);
+            }
+            30% {
+                transform: translateY(0) scale(1.1) rotate(5deg);
+            }
+            50% {
+                transform: translateY(-20px) scale(1) rotate(0deg);
+            }
+            70% {
+                transform: translateY(0) scale(1.05) rotate(-2deg);
+            }
+            85% {
+                transform: translateY(-10px) scale(1) rotate(0deg);
+            }
+            100% {
+                transform: translateY(-150vh) scale(0.8) rotate(10deg);
+            }
         }
 
         /* Envelope */
@@ -282,9 +433,11 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, oklch(0.92 0.08 30), oklch(0.88 0.10 20));
+            background: linear-gradient(135deg, 
+                oklch(0.88 0.08 40),
+                oklch(0.85 0.10 30));
             border-radius: 8px;
-            box-shadow: 0 10px 30px oklch(0.50 0.10 350 / 0.3);
+            box-shadow: 0 10px 30px oklch(0.20 0.10 350 / 0.5);
         }
 
         .envelope-flap {
@@ -293,7 +446,9 @@
             left: 0;
             width: 100%;
             height: 50%;
-            background: linear-gradient(135deg, oklch(0.88 0.10 25), oklch(0.85 0.12 15));
+            background: linear-gradient(135deg, 
+                oklch(0.50 0.15 350),
+                oklch(0.48 0.18 10));
             transform-origin: top center;
             border-radius: 8px 8px 0 0;
             transition: transform 1.2s ease;
@@ -311,11 +466,11 @@
             left: 10%;
             width: 80%;
             height: 85%;
-            background: oklch(0.97 0.02 30);
+            background: oklch(0.97 0.02 40);
             border-radius: 4px;
             transition: transform 1.2s ease 0.3s;
             z-index: 1;
-            box-shadow: 0 5px 15px oklch(0.50 0.10 350 / 0.2);
+            box-shadow: 0 5px 15px oklch(0.20 0.10 350 / 0.3);
         }
 
         .envelope-container.opened .envelope-letter {
@@ -325,18 +480,18 @@
         .envelope-text {
             font-family: 'Playfair Display', serif;
             font-size: 1.2rem;
-            color: oklch(0.35 0.15 350);
+            color: oklch(0.90 0.12 40);
             margin-top: 30px;
-            text-shadow: 0 2px 8px oklch(0.95 0.1 350 / 0.3);
+            text-shadow: 0 2px 8px oklch(0.50 0.15 350 / 0.5);
         }
 
         /* Letter content */
         .letter-content {
             max-width: 650px;
-            background: oklch(0.97 0.02 30);
+            background: oklch(0.97 0.02 40);
             padding: 50px 40px;
             border-radius: 12px;
-            box-shadow: 0 15px 50px oklch(0.50 0.10 350 / 0.3);
+            box-shadow: 0 15px 50px oklch(0.20 0.10 350 / 0.5);
             position: relative;
             overflow: hidden;
             margin-top: 40px;
@@ -350,20 +505,37 @@
             width: 100%;
             height: 100%;
             background-image: 
-                radial-gradient(circle, oklch(0.75 0.20 350 / 0.15) 20%, transparent 20%),
-                radial-gradient(circle, oklch(0.75 0.20 350 / 0.12) 20%, transparent 20%);
+                radial-gradient(circle, oklch(0.85 0.05 30 / 0.08) 20%, transparent 20%),
+                radial-gradient(circle, oklch(0.88 0.04 40 / 0.06) 20%, transparent 20%);
             background-size: 80px 80px, 100px 100px;
             background-position: 0 0, 40px 40px;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Kiss marks on letter */
+        .letter-content::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 20c-3-3-8-3-11 0-3 3-3 8 0 11l11 11 11-11c3-3 3-8 0-11-3-3-8-3-11 0z' fill='%23DC143C' opacity='0.15'/%3E%3C/svg%3E");
+            background-size: 120px 120px;
+            background-position: 20px 30px, 80px 90px;
             opacity: 0.4;
             pointer-events: none;
             z-index: 0;
+            transform: rotate(-15deg);
         }
 
         .letter-text {
             font-family: 'Poppins', sans-serif;
             font-size: clamp(0.95rem, 2.5vw, 1.15rem);
             line-height: 1.9;
-            color: oklch(0.30 0.12 350);
+            color: oklch(0.25 0.08 350);
             white-space: pre-line;
             position: relative;
             z-index: 1;
@@ -372,7 +544,12 @@
         .letter-signature {
             font-family: 'Great Vibes', cursive;
             font-size: 1.8rem;
-            color: oklch(0.65 0.20 350);
+            background: linear-gradient(135deg, 
+                oklch(0.50 0.20 350),
+                oklch(0.55 0.18 10));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-top: 30px;
             text-align: right;
         }
@@ -384,17 +561,20 @@
             right: 30px;
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, oklch(0.75 0.22 350), oklch(0.70 0.20 10));
+            background: linear-gradient(135deg, 
+                oklch(0.45 0.20 350),
+                oklch(0.50 0.18 10));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 8px 25px oklch(0.70 0.20 350 / 0.4);
+            box-shadow: 0 8px 25px oklch(0.45 0.20 350 / 0.5);
             transition: all 0.3s ease;
             z-index: 1000;
             opacity: 0;
             pointer-events: none;
+            border: 2px solid oklch(0.60 0.15 40 / 0.5);
         }
 
         .music-control.visible {
@@ -404,7 +584,7 @@
 
         .music-control:hover {
             transform: scale(1.1);
-            box-shadow: 0 12px 35px oklch(0.70 0.20 350 / 0.6);
+            box-shadow: 0 12px 35px oklch(0.45 0.20 350 / 0.7);
         }
 
         .music-control svg {
@@ -439,6 +619,11 @@
                 width: 24px;
                 height: 24px;
             }
+
+            .bouquet-image {
+                width: 90%;
+                max-width: 300px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -459,6 +644,65 @@
 <body>
     <!-- Floating particles background -->
     <div class="floating-particles" id="particles"></div>
+
+    <!-- Butterflies -->
+    <div class="butterfly butterfly-1">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="butterfly-wing-left">
+                <ellipse cx="35" cy="50" rx="25" ry="35" fill="oklch(0.45 0.20 280)" opacity="0.9"/>
+                <ellipse cx="35" cy="50" rx="18" ry="28" fill="oklch(0.60 0.18 40)" opacity="0.7"/>
+            </g>
+            <g class="butterfly-wing-right">
+                <ellipse cx="65" cy="50" rx="25" ry="35" fill="oklch(0.45 0.20 280)" opacity="0.9"/>
+                <ellipse cx="65" cy="50" rx="18" ry="28" fill="oklch(0.60 0.18 40)" opacity="0.7"/>
+            </g>
+            <ellipse cx="50" cy="50" rx="5" ry="15" fill="oklch(0.25 0.10 350)"/>
+        </svg>
+    </div>
+    <div class="butterfly butterfly-2">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="butterfly-wing-left">
+                <ellipse cx="35" cy="50" rx="25" ry="35" fill="oklch(0.50 0.20 350)" opacity="0.9"/>
+                <ellipse cx="35" cy="50" rx="18" ry="28" fill="oklch(0.70 0.15 40)" opacity="0.7"/>
+            </g>
+            <g class="butterfly-wing-right">
+                <ellipse cx="65" cy="50" rx="25" ry="35" fill="oklch(0.50 0.20 350)" opacity="0.9"/>
+                <ellipse cx="65" cy="50" rx="18" ry="28" fill="oklch(0.70 0.15 40)" opacity="0.7"/>
+            </g>
+            <ellipse cx="50" cy="50" rx="5" ry="15" fill="oklch(0.25 0.10 350)"/>
+        </svg>
+    </div>
+    <div class="butterfly butterfly-3">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="butterfly-wing-left">
+                <ellipse cx="35" cy="50" rx="25" ry="35" fill="oklch(0.55 0.18 10)" opacity="0.9"/>
+                <ellipse cx="35" cy="50" rx="18" ry="28" fill="oklch(0.75 0.12 40)" opacity="0.7"/>
+            </g>
+            <g class="butterfly-wing-right">
+                <ellipse cx="65" cy="50" rx="25" ry="35" fill="oklch(0.55 0.18 10)" opacity="0.9"/>
+                <ellipse cx="65" cy="50" rx="18" ry="28" fill="oklch(0.75 0.12 40)" opacity="0.7"/>
+            </g>
+            <ellipse cx="50" cy="50" rx="5" ry="15" fill="oklch(0.25 0.10 350)"/>
+        </svg>
+    </div>
+    <div class="butterfly butterfly-4">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <g class="butterfly-wing-left">
+                <ellipse cx="35" cy="50" rx="25" ry="35" fill="oklch(0.48 0.19 340)" opacity="0.9"/>
+                <ellipse cx="35" cy="50" rx="18" ry="28" fill="oklch(0.68 0.16 30)" opacity="0.7"/>
+            </g>
+            <g class="butterfly-wing-right">
+                <ellipse cx="65" cy="50" rx="25" ry="35" fill="oklch(0.48 0.19 340)" opacity="0.9"/>
+                <ellipse cx="65" cy="50" rx="18" ry="28" fill="oklch(0.68 0.16 30)" opacity="0.7"/>
+            </g>
+            <ellipse cx="50" cy="50" rx="5" ry="15" fill="oklch(0.25 0.10 350)"/>
+        </svg>
+    </div>
+
+    <!-- Bouquet presentation -->
+    <div class="bouquet-container" id="bouquetContainer">
+        <img src="/assets/generated/bouquet.dim_800x800.png" alt="Bouquet" class="bouquet-image">
+    </div>
 
     <!-- Intro Screen -->
     <div class="screen active" id="introScreen">
@@ -542,73 +786,138 @@ Forever yours,</div>
     <!-- Music Control -->
     <div class="music-control" id="musicControl" onclick="toggleMusic()">
         <svg id="musicIcon" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            <path d="M9 18V5l12-2v13M9 18c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm12-2c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>
         </svg>
     </div>
 
     <!-- Audio elements -->
-    <audio id="clickSound" preload="auto">
-        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
-    </audio>
     <audio id="bgMusic" loop preload="auto">
-        <!-- Placeholder for background music - using a simple tone -->
-        <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+        <source src="https://cdn.pixabay.com/download/audio/2022/03/10/audio_4a8f1b6e27.mp3" type="audio/mpeg">
     </audio>
 
     <script>
         // Create floating particles
         function createParticles() {
             const container = document.getElementById('particles');
-            const particles = [
-                { emoji: '💕', class: 'heart-particle', count: 15 },
-                { emoji: '🦋', class: 'butterfly', count: 8 },
-                { emoji: '🌹', class: 'rose', count: 10 },
-                { emoji: '💍', class: 'ring', count: 6 }
-            ];
-
-            particles.forEach(particle => {
-                for (let i = 0; i < particle.count; i++) {
-                    const elem = document.createElement('div');
-                    elem.className = particle.class;
-                    elem.textContent = particle.emoji;
-                    elem.style.left = Math.random() * 100 + '%';
-                    elem.style.top = Math.random() * 100 + '%';
-                    elem.style.animationDelay = Math.random() * 5 + 's';
-                    elem.style.animationDuration = (15 + Math.random() * 10) + 's';
-                    container.appendChild(elem);
-                }
-            });
-        }
-
-        // Create firecracker burst
-        function createFirecracker() {
-            const container = document.getElementById('firecrackerContainer');
-            const sparkCount = 30;
+            const particles = ['💖', '🌹', '💍', '✨'];
             
-            for (let i = 0; i < sparkCount; i++) {
-                const spark = document.createElement('div');
-                spark.className = 'spark';
-                const angle = (i / sparkCount) * Math.PI * 2;
-                const distance = 80 + Math.random() * 40;
-                const tx = Math.cos(angle) * distance;
-                const ty = Math.sin(angle) * distance;
-                spark.style.setProperty('--tx', tx + 'px');
-                spark.style.setProperty('--ty', ty + 'px');
-                spark.style.animationDelay = Math.random() * 0.3 + 's';
-                container.appendChild(spark);
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                const emoji = particles[Math.floor(Math.random() * particles.length)];
+                
+                if (emoji === '💖') {
+                    particle.className = 'heart-particle';
+                } else if (emoji === '🌹') {
+                    particle.className = 'rose';
+                } else if (emoji === '💍') {
+                    particle.className = 'ring';
+                } else {
+                    particle.className = 'heart-particle';
+                }
+                
+                particle.textContent = emoji;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                
+                container.appendChild(particle);
             }
         }
 
-        // Play click sound
-        function playClickSound() {
-            const sound = document.getElementById('clickSound');
-            sound.currentTime = 0;
-            sound.play().catch(() => {});
+        // Create enhanced firecracker burst
+        function createFirecrackerBurst() {
+            const container = document.getElementById('firecrackerContainer');
+            const colors = [
+                'oklch(0.70 0.25 350)',  // Deep red
+                'oklch(0.75 0.22 10)',   // Red-orange
+                'oklch(0.80 0.20 40)',   // Gold
+                'oklch(0.85 0.18 50)',   // Bright gold
+                'oklch(0.55 0.20 280)',  // Purple
+                'oklch(0.90 0.15 60)'    // Yellow
+            ];
+            
+            // Create multiple burst centers
+            const burstCenters = [
+                { x: 50, y: 50, delay: 0, count: 80 },
+                { x: 30, y: 40, delay: 0.3, count: 60 },
+                { x: 70, y: 45, delay: 0.5, count: 60 },
+                { x: 50, y: 35, delay: 0.8, count: 70 }
+            ];
+
+            burstCenters.forEach(burst => {
+                setTimeout(() => {
+                    for (let i = 0; i < burst.count; i++) {
+                        const spark = document.createElement('div');
+                        spark.className = 'spark';
+                        
+                        const angle = (Math.PI * 2 * i) / burst.count;
+                        const velocity = 80 + Math.random() * 120;
+                        const tx = Math.cos(angle) * velocity;
+                        const ty = Math.sin(angle) * velocity;
+                        
+                        spark.style.setProperty('--tx', `${tx}px`);
+                        spark.style.setProperty('--ty', `${ty}px`);
+                        spark.style.left = burst.x + '%';
+                        spark.style.top = burst.y + '%';
+                        spark.style.background = colors[Math.floor(Math.random() * colors.length)];
+                        spark.style.animationDelay = Math.random() * 0.2 + 's';
+                        spark.style.animationDuration = (1.5 + Math.random() * 0.8) + 's';
+                        
+                        container.appendChild(spark);
+                        
+                        setTimeout(() => spark.remove(), 3000);
+                    }
+                }, burst.delay * 1000);
+            });
         }
 
-        // Transition between screens
-        function transitionScreen(fromId, toId) {
-            playClickSound();
+        // Initialize
+        window.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            createFirecrackerBurst();
+        });
+
+        // Navigation functions
+        function startJourney() {
+            switchScreen('introScreen', 'question1');
+        }
+
+        function nextQuestion(num) {
+            const currentScreen = 'question' + (num - 1);
+            const nextScreen = 'question' + num;
+            switchScreen(currentScreen, nextScreen);
+        }
+
+        function showEnvelope() {
+            // Show bouquet animation first
+            const bouquetContainer = document.getElementById('bouquetContainer');
+            bouquetContainer.classList.add('show');
+            
+            // After bouquet animation, show envelope
+            setTimeout(() => {
+                switchScreen('question4', 'envelopeScreen');
+                bouquetContainer.classList.remove('show');
+            }, 4000);
+        }
+
+        function openEnvelope() {
+            const envelope = document.getElementById('envelopeContainer');
+            envelope.classList.add('opened');
+            
+            setTimeout(() => {
+                switchScreen('envelopeScreen', 'letterScreen');
+                
+                // Start music
+                const music = document.getElementById('bgMusic');
+                const musicControl = document.getElementById('musicControl');
+                music.volume = 0.25;
+                music.play().catch(e => console.log('Music autoplay prevented'));
+                musicControl.classList.add('visible');
+            }, 2000);
+        }
+
+        function switchScreen(fromId, toId) {
             const fromScreen = document.getElementById(fromId);
             const toScreen = document.getElementById(toId);
             
@@ -622,74 +931,21 @@ Forever yours,</div>
             }, 800);
         }
 
-        // Start journey
-        function startJourney() {
-            transitionScreen('introScreen', 'question1');
-        }
-
-        // Next question
-        function nextQuestion(questionNum) {
-            const currentId = 'question' + (questionNum - 1);
-            const nextId = 'question' + questionNum;
-            transitionScreen(currentId, nextId);
-        }
-
-        // Show envelope
-        function showEnvelope() {
-            transitionScreen('question4', 'envelopeScreen');
-        }
-
-        // Open envelope
-        function openEnvelope() {
-            playClickSound();
-            const envelope = document.getElementById('envelopeContainer');
-            envelope.classList.add('opened');
-            
-            setTimeout(() => {
-                transitionScreen('envelopeScreen', 'letterScreen');
-                startMusic();
-            }, 1800);
-        }
-
         // Music control
-        let isMusicPlaying = false;
-        
-        function startMusic() {
-            const music = document.getElementById('bgMusic');
-            const control = document.getElementById('musicControl');
-            music.volume = 0.25;
-            music.play().catch(() => {});
-            isMusicPlaying = true;
-            control.classList.add('visible');
-            updateMusicIcon();
-        }
-
+        let isMusicPlaying = true;
         function toggleMusic() {
             const music = document.getElementById('bgMusic');
+            const icon = document.getElementById('musicIcon');
+            
             if (isMusicPlaying) {
                 music.pause();
-                isMusicPlaying = false;
+                icon.innerHTML = '<path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>';
             } else {
-                music.play().catch(() => {});
-                isMusicPlaying = true;
+                music.play();
+                icon.innerHTML = '<path d="M9 18V5l12-2v13M9 18c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm12-2c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3z"/>';
             }
-            updateMusicIcon();
+            isMusicPlaying = !isMusicPlaying;
         }
-
-        function updateMusicIcon() {
-            const icon = document.getElementById('musicIcon');
-            if (isMusicPlaying) {
-                icon.innerHTML = '<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>';
-            } else {
-                icon.innerHTML = '<path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" opacity="0.3"/><line x1="2" y1="2" x2="22" y2="22" stroke="currentColor" stroke-width="2"/>';
-            }
-        }
-
-        // Initialize
-        window.addEventListener('DOMContentLoaded', () => {
-            createParticles();
-            createFirecracker();
-        });
     </script>
 </body>
 </html>

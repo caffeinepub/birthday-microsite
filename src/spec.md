@@ -1,18 +1,14 @@
 # Specification
 
 ## Summary
-**Goal:** Create a romantic interactive birthday microsite for Angel with cinematic animations, question flow, and personalized letter reveal.
+**Goal:** Transform the birthday microsite from a pink childish aesthetic to a mature romantic experience with sophisticated colors, dramatic animations, background music, and decorative elements.
 
 **Planned changes:**
-- Build single-file index.html with mobile-responsive centered layout
-- Implement soft red/pink gradient background with floating hearts, butterflies, roses, and ring animations
-- Create full-screen intro with firecracker burst animation and glowing "Happy Birthday Angel ❣️✨" text
-- Add glowing "Claim your bouquet 💐❣️" button with sound effect that transitions to question flow
-- Implement four sequential full-screen romantic questions with two YES-style answer buttons each (scaling, glowing, sound effects)
-- Display animated envelope that opens on click and triggers looped romantic instrumental music at 25% volume
-- Show heart-shaped mute/unmute toggle in bottom corner
-- Reveal birthday letter with exact Tamil/English text on paper-textured background with subtle kiss mark pattern
-- Use Google Fonts for romantic typography
-- Optimize all animations for smooth mobile performance
+- Replace predominantly pink color scheme with mature romantic palette (reds, golds, deep purples, whites)
+- Add visible red lipstick kiss mark pattern to letter background
+- Integrate royalty-free romantic background music that plays after envelope opens
+- Enhance firecracker burst animation with dramatic particle effects and sound
+- Add animated bouquet giving sequence between question flow and envelope reveal
+- Implement flying butterflies throughout the microsite with realistic flight patterns and wing movements
 
-**User-visible outcome:** Angel can experience a cinematic romantic birthday surprise with interactive questions leading to a personalized letter reveal, accompanied by background music and magical floating animations.
+**User-visible outcome:** Users experience a sophisticated romantic microsite with elegant colors, dramatic firecracker bursts, floating butterflies, an animated bouquet presentation, romantic background music, and kiss marks decorating the letter—creating a mature, memorable birthday experience.

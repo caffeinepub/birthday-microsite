@@ -1,130 +1,143 @@
 {
   "kind": "build_request",
-  "title": "Create romantic interactive birthday microsite",
-  "projectName": "Angel Birthday",
+  "title": "Enhance romantic microsite with mature aesthetic, music, kiss marks, and animations",
+  "projectName": "Birthday Angel",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Create a single-file index.html romantic birthday microsite with mobile-responsive centered layout, elegant soft red and pink gradient background, subtle floating heart particles, butterflies, roses, and subtle floating ring animations with smooth romantic-style motion",
+      "id": "REQ-7",
+      "text": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "where is red lips kiss on the letter"
         ]
       },
       "acceptanceCriteria": [
-        "All content exists in a single index.html file",
-        "Layout is mobile responsive and centered",
-        "Background uses soft red and pink gradient",
-        "Floating heart particles animate continuously",
-        "Butterflies, roses, and rings float with smooth romantic animations",
-        "Visual style feels magical, warm, emotional and premium (not childish)"
+        "Red lipstick kiss marks are clearly visible on the letter background",
+        "Kiss marks are subtle enough to not interfere with text readability",
+        "Pattern appears on the paper-textured background beneath the letter text"
       ]
     },
     {
-      "id": "REQ-2",
-      "text": "Implement full-screen intro screen with firecracker bursting animation at top, glowing text 'Happy Birthday Angel ❣️✨' appearing from the burst with cinematic feel, and glowing button below labeled 'Claim your bouquet 💐❣️' that plays soft romantic click chime sound on press and transitions smoothly to question flow",
+      "id": "REQ-8",
+      "text": "Integrate royalty-free romantic background music that plays after the envelope opens",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "where is...royalty free music"
         ]
       },
       "acceptanceCriteria": [
-        "Intro screen occupies full viewport",
-        "Firecracker burst animation plays at top",
-        "Text 'Happy Birthday Angel ❣️✨' appears from burst with glow effect",
-        "Animation feels cinematic",
-        "Button 'Claim your bouquet 💐❣️' glows and plays chime sound on click",
-        "Smooth fade transition to question flow after button click"
+        "Background music plays automatically after envelope opens",
+        "Music is royalty-free and suitable for romantic occasions",
+        "Music volume is set appropriately (around 25%)",
+        "Mute/unmute toggle controls work correctly"
       ]
     },
     {
-      "id": "REQ-3",
-      "text": "Implement question flow with four full-screen questions using elegant romantic font and soft glow animation, each with two YES-style answer buttons that scale and glow on hover and play soft chime sound when clicked. Questions: 1) 'Is there an angel who accidentally came to earth and chose me? 🕊️❣️✨' (buttons: 'Yes of course 😌💖', 'Obviously yes 😍❣️'), 2) 'Is there someone who behaves like my little baby but rules my heart like a queen? 👶👑💗' (buttons: 'Yes, that's me 😚💞', '100% yes 🥰✨'), 3) 'Did destiny send me the purest heart in this entire universe? 🌍🫀❣️' (buttons: 'Yes absolutely 💖✨', 'Without any doubt 😌❣️'), 4) 'Should that little angel open something special now? 💌🌹❣️' (buttons: 'Yes, open ittt 😍💗', 'Yessss right nowww 🥰❣️')",
+      "id": "REQ-9",
+      "text": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "I don't want it like this childish",
+          "not only full of pink"
         ]
       },
       "acceptanceCriteria": [
-        "Each question occupies full screen",
-        "Questions use elegant romantic font with soft glow animation",
-        "All four questions display with exact text and emojis as specified",
-        "Each question has two YES-style buttons with exact labels as specified",
-        "Buttons scale and glow on hover",
-        "Buttons play soft chime sound on click",
-        "Questions progress sequentially through the flow"
+        "Color palette uses sophisticated romantic colors beyond just pink",
+        "Design feels mature and elegant rather than childish",
+        "Visual theme maintains romantic atmosphere without excessive pink dominance",
+        "Gradient backgrounds and UI elements use the updated color scheme"
       ]
     },
     {
-      "id": "REQ-4",
-      "text": "After final question button click, display centered animated envelope that opens smoothly when clicked, starts playing looped soft romantic instrumental Tamil background music at 25% volume, and shows small heart-shaped mute/unmute toggle icon in bottom corner",
+      "id": "REQ-10",
+      "text": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "I want the bursting of crackers"
         ]
       },
       "acceptanceCriteria": [
-        "Animated envelope appears centered after final question",
-        "Envelope opens with smooth animation when clicked",
-        "Royalty-free soft romantic instrumental music starts playing on envelope open",
-        "Music loops continuously at 25% volume",
-        "Heart-shaped mute/unmute icon appears in bottom corner",
-        "Mute/unmute icon toggles music playback"
+        "Firecracker burst animation is prominent and visually impressive",
+        "Particles burst outward with realistic physics and timing",
+        "Animation plays immediately when intro screen loads",
+        "Burst effect precedes the 'Happy Birthday Angel' text reveal"
       ]
     },
     {
-      "id": "REQ-5",
-      "text": "Display birthday letter content with exact text: 'Hiii pondaatiyeeee ❣️✨ Happy birthdayyyy diii en thangooooo 😚💗💞 Unnai pathi solla neraya vishayam irukku di… 💕 Aana namakku naalaiku exam irukkuradhu nala, Enala mudinjadha oru chinna kutty surprise dhaan idhu unakkaga ✨💌 Nee dhaan en heart oda top la irukka koodiya ore queen 👑💖 Nee siricha podhum en world complete aagidum 🫀🌍 Be happy always… Keep smiling… En angel ah ippadiye irundha pothum 🥰❣️ 🫀 = 🌍 = 👑 = Nee dhan 💖✨ Forever yours, ~ Emikoooooo ❣️' on paper-textured background with subtle red lipstick kiss mark pattern that does not obscure text, using elegant spacing",
+      "id": "REQ-11",
+      "text": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "an animation of giving boquet"
         ]
       },
       "acceptanceCriteria": [
-        "Letter displays exact content with all emojis and text as specified",
-        "Background has paper texture feel",
-        "Subtle red lipstick kiss mark pattern is visible but does not hide text",
-        "Text has elegant spacing and readability",
-        "Letter appears after envelope opening animation"
+        "Animated bouquet appears and presents itself to the user",
+        "Animation shows a giving/presenting motion",
+        "Timing integrates smoothly between question flow and envelope sequence",
+        "Bouquet visual matches the mature romantic aesthetic"
       ]
     },
     {
-      "id": "REQ-6",
-      "text": "Use Google Fonts for romantic typography throughout the microsite and ensure all animations are smooth and optimized for mobile device performance",
+      "id": "REQ-12",
+      "text": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-5"
+        ],
+        "quotes": [
+          "i want butterfly to fly"
         ]
       },
       "acceptanceCriteria": [
-        "Google Fonts are loaded and applied for romantic typography",
-        "All animations run smoothly on mobile devices",
-        "Performance is optimized for mobile browsers",
-        "No janky or laggy animation behavior on mobile"
+        "Multiple butterflies animate with realistic flying motion across screens",
+        "Butterfly wings flap naturally during flight",
+        "Flight paths are varied and organic (not linear)",
+        "Butterflies appear throughout different sections of the microsite",
+        "Animation performance is smooth on mobile devices"
       ]
     }
   ],
   "constraints": [
-    "All code must be contained in a single index.html file",
-    "Must use royalty-free music or sound effects only",
-    "Letter content text must be reproduced exactly as specified including all emojis and Tamil text"
+    "Maintain single-file index.html architecture",
+    "Preserve existing letter text content exactly as specified",
+    "Keep mobile-responsive design and touch interactions",
+    "Ensure all animations remain smooth on mobile devices",
+    "Use only royalty-free music sources"
   ],
   "nonGoals": [
-    "Multi-page navigation",
-    "Backend integration",
-    "User authentication",
-    "Data persistence",
-    "Multi-language support beyond the specified Tamil text"
+    "Changing the four-question flow structure",
+    "Modifying the envelope opening mechanism",
+    "Altering the letter text content",
+    "Adding external dependencies or frameworks",
+    "Creating multi-page navigation"
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Elegant bouquet of roses illustration in mature romantic style with reds, whites and gold accents (bouquet.dim_800x800.png)"
+    ],
     "edits": []
   }
 }

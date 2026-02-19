@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-create-a-single-file-index-html-romantic-birthday-microsite-with-mobile-responsive-centered-layout-elegant-soft-red-and-pink-gradient-background-subtle-floating-heart-particles-butterflies-roses-and-subtle-floating-ring-animations-with-smooth-romantic-style-motion",
-      "featureTitle": "Create a single-file index.html romantic birthday microsite with mobile-responsive centered layout, elegant soft red and pink gradient background, subtle floating heart particles, butterflies, roses, and subtle floating ring animations with smooth romantic-style motion",
+      "featureId": "feature-add-visible-red-lipstick-kiss-mark-pattern-to-the-letter-background-that-decorates-the-paper-texture-without-obscuring-the-letter-text",
+      "featureTitle": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
       "files": [
         "frontend/index.html"
       ],
@@ -15,13 +15,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
+        "REQ-7"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-full-screen-intro-screen-with-firecracker-bursting-animation-at-top-glowing-text-happy-birthday-angel-appearing-from-the-burst-with-cinematic-feel-and-glowing-button-below-labeled-claim-your-bouquet-that-plays-soft-romantic-click-chime-sound-on-press-and-transitions-smoothly-to-question-flow",
-      "featureTitle": "Implement full-screen intro screen with firecracker bursting animation at top, glowing text 'Happy Birthday Angel ❣️✨' appearing from the burst with cinematic feel, and glowing button below labeled 'Claim your bouquet 💐❣️' that plays soft romantic click chime sound on press and transitions smoothly to question flow",
+      "featureId": "feature-integrate-royalty-free-romantic-background-music-that-plays-after-the-envelope-opens",
+      "featureTitle": "Integrate royalty-free romantic background music that plays after the envelope opens",
       "files": [
         "frontend/index.html"
       ],
@@ -33,13 +33,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-2"
+        "REQ-8"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-implement-question-flow-with-four-full-screen-questions-using-elegant-romantic-font-and-soft-glow-animation-each-with-two-yes-style-answer-buttons-that-scale-and-glow-on-hover-and-play-soft-chime-sound-when-clicked-questions-1-is-there-an-angel-who-accidentally-came-to-earth-and-chose-me-buttons-yes-of-course-obviously-yes-2-is-there-someone-who-behaves-like-my-little-baby-but-rules-my-heart-like-a-queen-buttons-yes-that-s-me-100-yes-3-did-destiny-send-me-the-purest-heart-in-this-entire-universe-buttons-yes-absolutely-without-any-doubt-4-should-that-little-angel-open-something-special-now-buttons-yes-open-ittt-yessss-right-nowww",
-      "featureTitle": "Implement question flow with four full-screen questions using elegant romantic font and soft glow animation, each with two YES-style answer buttons that scale and glow on hover and play soft chime sound when clicked. Questions: 1) 'Is there an angel who accidentally came to earth and chose me? 🕊️❣️✨' (buttons: 'Yes of course 😌💖', 'Obviously yes 😍❣️'), 2) 'Is there someone who behaves like my little baby but rules my heart like a queen? 👶👑💗' (buttons: 'Yes, that's me 😚💞', '100% yes 🥰✨'), 3) 'Did destiny send me the purest heart in this entire universe? 🌍🫀❣️' (buttons: 'Yes absolutely 💖✨', 'Without any doubt 😌❣️'), 4) 'Should that little angel open something special now? 💌🌹❣️' (buttons: 'Yes, open ittt 😍💗', 'Yessss right nowww 🥰❣️')",
+      "featureId": "feature-redesign-color-scheme-from-predominantly-pink-to-a-mature-romantic-aesthetic-with-varied-elegant-colors-including-reds-golds-deep-purples-and-whites-while-maintaining-romantic-feel",
+      "featureTitle": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
       "files": [
         "frontend/index.html"
       ],
@@ -51,13 +51,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-3"
+        "REQ-9"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-after-final-question-button-click-display-centered-animated-envelope-that-opens-smoothly-when-clicked-starts-playing-looped-soft-romantic-instrumental-tamil-background-music-at-25-volume-and-shows-small-heart-shaped-mute-unmute-toggle-icon-in-bottom-corner",
-      "featureTitle": "After final question button click, display centered animated envelope that opens smoothly when clicked, starts playing looped soft romantic instrumental Tamil background music at 25% volume, and shows small heart-shaped mute/unmute toggle icon in bottom corner",
+      "featureId": "feature-enhance-firecracker-burst-animation-at-intro-screen-to-be-more-dramatic-and-realistic-with-particle-effects-and-sound",
+      "featureTitle": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
       "files": [
         "frontend/index.html"
       ],
@@ -69,13 +69,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-4"
+        "REQ-10"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-display-birthday-letter-content-with-exact-text-hiii-pondaatiyeeee-happy-birthdayyyy-diii-en-thangooooo-unnai-pathi-solla-neraya-vishayam-irukku-di-aana-namakku-naalaiku-exam-irukkuradhu-nala-enala-mudinjadha-oru-chinna-kutty-surprise-dhaan-idhu-unakkaga-nee-dhaan-en-heart-oda-top-la-irukka-koodiya-ore-queen-nee-siricha-podhum-en-world-complete-aagidum-be-happy-always-keep-smiling-en-angel-ah-ippadiye-irundha-pothum-nee-dhan-forever-yours-emikoooooo-on-paper-textured-background-with-subtle-red-lipstick-kiss-mark-pattern-that-does-not-obscure-text-using-elegant-spacing",
-      "featureTitle": "Display birthday letter content with exact text: 'Hiii pondaatiyeeee ❣️✨ Happy birthdayyyy diii en thangooooo 😚💗💞 Unnai pathi solla neraya vishayam irukku di… 💕 Aana namakku naalaiku exam irukkuradhu nala, Enala mudinjadha oru chinna kutty surprise dhaan idhu unakkaga ✨💌 Nee dhaan en heart oda top la irukka koodiya ore queen 👑💖 Nee siricha podhum en world complete aagidum 🫀🌍 Be happy always… Keep smiling… En angel ah ippadiye irundha pothum 🥰❣️ 🫀 = 🌍 = 👑 = Nee dhan 💖✨ Forever yours, ~ Emikoooooo ❣️' on paper-textured background with subtle red lipstick kiss mark pattern that does not obscure text, using elegant spacing",
+      "featureId": "feature-add-animated-bouquet-giving-sequence-that-plays-after-the-question-flow-and-before-or-during-the-envelope-reveal",
+      "featureTitle": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
       "files": [
         "frontend/index.html"
       ],
@@ -87,13 +87,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-5"
+        "REQ-11"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-use-google-fonts-for-romantic-typography-throughout-the-microsite-and-ensure-all-animations-are-smooth-and-optimized-for-mobile-device-performance",
-      "featureTitle": "Use Google Fonts for romantic typography throughout the microsite and ensure all animations are smooth and optimized for mobile device performance",
+      "featureId": "feature-implement-flying-butterfly-animations-throughout-the-microsite-with-natural-flight-patterns-and-wing-movements",
+      "featureTitle": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
       "files": [
         "frontend/index.html"
       ],
@@ -105,7 +105,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-6"
+        "REQ-12"
       ],
       "confidence": "high"
     }
