@@ -1,18 +1,18 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-19T11:23:03.873Z",
+  "generatedAt": "2026-02-20T19:26:17.881Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 6,
-    "implemented": 6,
+    "total": 4,
+    "implemented": 4,
     "items": [
       {
-        "id": "REQ-10",
-        "summary": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
+        "id": "REQ-1",
+        "summary": "Add a crackers burst animation effect that plays at an appropriate moment in the experience (e.g., during intro or transition)",
         "status": "implemented",
         "plannedFiles": [
           "frontend/index.html"
@@ -22,8 +22,8 @@
         ]
       },
       {
-        "id": "REQ-11",
-        "summary": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
+        "id": "REQ-2",
+        "summary": "Ensure letter text has sufficient contrast against the background so it is not camouflaged and remains clearly readable",
         "status": "implemented",
         "plannedFiles": [
           "frontend/index.html"
@@ -33,8 +33,8 @@
         ]
       },
       {
-        "id": "REQ-12",
-        "summary": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
+        "id": "REQ-3",
+        "summary": "Fill the letter area with kiss graphics as a background pattern that does not obscure or hide the text content",
         "status": "implemented",
         "plannedFiles": [
           "frontend/index.html"
@@ -44,30 +44,8 @@
         ]
       },
       {
-        "id": "REQ-7",
-        "summary": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/index.html"
-        ],
-        "matchedFiles": [
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-8",
-        "summary": "Integrate royalty-free romantic background music that plays after the envelope opens",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/index.html"
-        ],
-        "matchedFiles": [
-          "frontend/index.html"
-        ]
-      },
-      {
-        "id": "REQ-9",
-        "summary": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
+        "id": "REQ-4",
+        "summary": "Fix butterfly rendering so they display as proper butterfly shapes instead of boxes",
         "status": "implemented",
         "plannedFiles": [
           "frontend/index.html"
@@ -80,12 +58,11 @@
   },
   "changedFiles": [
     "build-request.json",
-    "build-template/README.md",
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
     "frontend/index.html",
-    "frontend/public/assets/generated/bouquet.dim_800x800.png",
+    "frontend/public/assets/generated/kiss-mark.dim_64x64.png",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

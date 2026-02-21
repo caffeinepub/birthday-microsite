@@ -2,8 +2,8 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-visible-red-lipstick-kiss-mark-pattern-to-the-letter-background-that-decorates-the-paper-texture-without-obscuring-the-letter-text",
-      "featureTitle": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
+      "featureId": "feature-add-a-crackers-burst-animation-effect-that-plays-at-an-appropriate-moment-in-the-experience-e-g-during-intro-or-transition",
+      "featureTitle": "Add a crackers burst animation effect that plays at an appropriate moment in the experience (e.g., during intro or transition)",
       "files": [
         "frontend/index.html"
       ],
@@ -15,13 +15,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-7"
+        "REQ-1"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-integrate-royalty-free-romantic-background-music-that-plays-after-the-envelope-opens",
-      "featureTitle": "Integrate royalty-free romantic background music that plays after the envelope opens",
+      "featureId": "feature-ensure-letter-text-has-sufficient-contrast-against-the-background-so-it-is-not-camouflaged-and-remains-clearly-readable",
+      "featureTitle": "Ensure letter text has sufficient contrast against the background so it is not camouflaged and remains clearly readable",
       "files": [
         "frontend/index.html"
       ],
@@ -33,13 +33,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-8"
+        "REQ-2"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-redesign-color-scheme-from-predominantly-pink-to-a-mature-romantic-aesthetic-with-varied-elegant-colors-including-reds-golds-deep-purples-and-whites-while-maintaining-romantic-feel",
-      "featureTitle": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
+      "featureId": "feature-fill-the-letter-area-with-kiss-graphics-as-a-background-pattern-that-does-not-obscure-or-hide-the-text-content",
+      "featureTitle": "Fill the letter area with kiss graphics as a background pattern that does not obscure or hide the text content",
       "files": [
         "frontend/index.html"
       ],
@@ -51,13 +51,13 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-9"
+        "REQ-3"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-enhance-firecracker-burst-animation-at-intro-screen-to-be-more-dramatic-and-realistic-with-particle-effects-and-sound",
-      "featureTitle": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
+      "featureId": "feature-fix-butterfly-rendering-so-they-display-as-proper-butterfly-shapes-instead-of-boxes",
+      "featureTitle": "Fix butterfly rendering so they display as proper butterfly shapes instead of boxes",
       "files": [
         "frontend/index.html"
       ],
@@ -69,43 +69,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-10"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-animated-bouquet-giving-sequence-that-plays-after-the-question-flow-and-before-or-during-the-envelope-reveal",
-      "featureTitle": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
-      "files": [
-        "frontend/index.html"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-11"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-implement-flying-butterfly-animations-throughout-the-microsite-with-natural-flight-patterns-and-wing-movements",
-      "featureTitle": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
-      "files": [
-        "frontend/index.html"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-12"
+        "REQ-4"
       ],
       "confidence": "high"
     }

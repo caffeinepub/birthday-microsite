@@ -1,14 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Transform the birthday microsite from a pink childish aesthetic to a mature romantic experience with sophisticated colors, dramatic animations, background music, and decorative elements.
+**Goal:** Add crackers burst animation, improve letter text contrast, add kiss pattern background, and fix butterfly rendering.
 
 **Planned changes:**
-- Replace predominantly pink color scheme with mature romantic palette (reds, golds, deep purples, whites)
-- Add visible red lipstick kiss mark pattern to letter background
-- Integrate royalty-free romantic background music that plays after envelope opens
-- Enhance firecracker burst animation with dramatic particle effects and sound
-- Add animated bouquet giving sequence between question flow and envelope reveal
-- Implement flying butterflies throughout the microsite with realistic flight patterns and wing movements
+- Add crackers burst animation effect during intro or transition
+- Improve letter text contrast against pink gradient background
+- Add kiss graphics as subtle background pattern in letter area
+- Fix butterfly rendering to display proper butterfly shapes instead of boxes
 
-**User-visible outcome:** Users experience a sophisticated romantic microsite with elegant colors, dramatic firecracker bursts, floating butterflies, an animated bouquet presentation, romantic background music, and kiss marks decorating the letter—creating a mature, memorable birthday experience.
+**User-visible outcome:** Users will see a celebratory crackers burst effect, clearly readable letter text with a romantic kiss pattern background, and properly rendered butterflies throughout the experience.

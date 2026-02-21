@@ -1,120 +1,49 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 5,
-  "summary": "Romantic interactive birthday microsite with intro animation, question flow, and animated letter reveal",
+  "projectStateVersion": 3,
+  "summary": "Interactive visual project with animated elements including crackers burst effect, kiss-filled letters with visible text, and butterfly animations",
   "architectural_notes": [
-    "Single HTML file architecture with embedded CSS and JavaScript",
-    "Mobile-first responsive design with centered layout",
-    "Google Fonts for romantic typography",
-    "CSS animations for hearts, butterflies, roses, rings floating particles",
-    "Multi-screen flow: intro → questions → envelope → letter",
-    "Audio: UI click sounds + background Tamil romantic music (royalty-free)",
-    "Mute/unmute control for background music"
+    "Letters need high contrast with background for visibility",
+    "Kiss graphics should be background decoration within letters, not overlay text",
+    "Butterflies require proper SVG or sprite rendering (not box placeholders)"
   ],
   "known_issues": [
-    "Red lipstick kiss marks not visible on letter background",
-    "Background music not playing or missing",
-    "Design appears too childish/pink-heavy",
-    "Missing firecracker burst animation",
-    "Missing bouquet giving animation",
-    "Butterfly animations not present or not flying"
+    "Butterflies currently rendering as boxes instead of proper shapes",
+    "Letters may be camouflaged against background",
+    "Text visibility compromised when filled with kiss graphics"
   ],
   "isFixRequest": true,
-  "imageRequirements": "## Required Images\n- Elegant bouquet of roses illustration in mature romantic style with reds, whites and gold accents (bouquet.dim_800x800.png)",
+  "imageRequirements": "## Required Images\n- Decorative kiss mark icon in romantic style suitable for pattern background (kiss-mark.dim_64x64.png)",
   "existing_features": [
     {
-      "id": "feature-create-a-single-file-index-html-romantic-birthday-microsite-with-mobile-responsive-centered-layout-elegant-soft-red-and-pink-gradient-background-subtle-floating-heart-particles-butterflies-roses-and-subtle-floating-ring-animations-with-smooth-romantic-style-motion",
-      "title": "Create a single-file index.html romantic birthday microsite with mobile-responsive centered layout, elegant soft red and pink gradient background, subtle floating heart particles, butterflies, roses, and subtle floating ring animations with smooth romantic-style motion",
+      "id": "feature-add-a-crackers-burst-animation-effect-that-plays-at-an-appropriate-moment-in-the-experience-e-g-during-intro-or-transition",
+      "title": "Add a crackers burst animation effect that plays at an appropriate moment in the experience (e.g., during intro or transition)",
       "reqIds": [
         "REQ-1"
       ],
       "version": 1
     },
     {
-      "id": "feature-implement-full-screen-intro-screen-with-firecracker-bursting-animation-at-top-glowing-text-happy-birthday-angel-appearing-from-the-burst-with-cinematic-feel-and-glowing-button-below-labeled-claim-your-bouquet-that-plays-soft-romantic-click-chime-sound-on-press-and-transitions-smoothly-to-question-flow",
-      "title": "Implement full-screen intro screen with firecracker bursting animation at top, glowing text 'Happy Birthday Angel ❣️✨' appearing from the burst with cinematic feel, and glowing button below labeled 'Claim your bouquet 💐❣️' that plays soft romantic click chime sound on press and transitions smoothly to question flow",
+      "id": "feature-ensure-letter-text-has-sufficient-contrast-against-the-background-so-it-is-not-camouflaged-and-remains-clearly-readable",
+      "title": "Ensure letter text has sufficient contrast against the background so it is not camouflaged and remains clearly readable",
       "reqIds": [
         "REQ-2"
       ],
       "version": 1
     },
     {
-      "id": "feature-implement-question-flow-with-four-full-screen-questions-using-elegant-romantic-font-and-soft-glow-animation-each-with-two-yes-style-answer-buttons-that-scale-and-glow-on-hover-and-play-soft-chime-sound-when-clicked-questions-1-is-there-an-angel-who-accidentally-came-to-earth-and-chose-me-buttons-yes-of-course-obviously-yes-2-is-there-someone-who-behaves-like-my-little-baby-but-rules-my-heart-like-a-queen-buttons-yes-that-s-me-100-yes-3-did-destiny-send-me-the-purest-heart-in-this-entire-universe-buttons-yes-absolutely-without-any-doubt-4-should-that-little-angel-open-something-special-now-buttons-yes-open-ittt-yessss-right-nowww",
-      "title": "Implement question flow with four full-screen questions using elegant romantic font and soft glow animation, each with two YES-style answer buttons that scale and glow on hover and play soft chime sound when clicked. Questions: 1) 'Is there an angel who accidentally came to earth and chose me? 🕊️❣️✨' (buttons: 'Yes of course 😌💖', 'Obviously yes 😍❣️'), 2) 'Is there someone who behaves like my little baby but rules my heart like a queen? 👶👑💗' (buttons: 'Yes, that's me 😚💞', '100% yes 🥰✨'), 3) 'Did destiny send me the purest heart in this entire universe? 🌍🫀❣️' (buttons: 'Yes absolutely 💖✨', 'Without any doubt 😌❣️'), 4) 'Should that little angel open something special now? 💌🌹❣️' (buttons: 'Yes, open ittt 😍💗', 'Yessss right nowww 🥰❣️')",
+      "id": "feature-fill-the-letter-area-with-kiss-graphics-as-a-background-pattern-that-does-not-obscure-or-hide-the-text-content",
+      "title": "Fill the letter area with kiss graphics as a background pattern that does not obscure or hide the text content",
       "reqIds": [
         "REQ-3"
       ],
       "version": 1
     },
     {
-      "id": "feature-after-final-question-button-click-display-centered-animated-envelope-that-opens-smoothly-when-clicked-starts-playing-looped-soft-romantic-instrumental-tamil-background-music-at-25-volume-and-shows-small-heart-shaped-mute-unmute-toggle-icon-in-bottom-corner",
-      "title": "After final question button click, display centered animated envelope that opens smoothly when clicked, starts playing looped soft romantic instrumental Tamil background music at 25% volume, and shows small heart-shaped mute/unmute toggle icon in bottom corner",
+      "id": "feature-fix-butterfly-rendering-so-they-display-as-proper-butterfly-shapes-instead-of-boxes",
+      "title": "Fix butterfly rendering so they display as proper butterfly shapes instead of boxes",
       "reqIds": [
         "REQ-4"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-display-birthday-letter-content-with-exact-text-hiii-pondaatiyeeee-happy-birthdayyyy-diii-en-thangooooo-unnai-pathi-solla-neraya-vishayam-irukku-di-aana-namakku-naalaiku-exam-irukkuradhu-nala-enala-mudinjadha-oru-chinna-kutty-surprise-dhaan-idhu-unakkaga-nee-dhaan-en-heart-oda-top-la-irukka-koodiya-ore-queen-nee-siricha-podhum-en-world-complete-aagidum-be-happy-always-keep-smiling-en-angel-ah-ippadiye-irundha-pothum-nee-dhan-forever-yours-emikoooooo-on-paper-textured-background-with-subtle-red-lipstick-kiss-mark-pattern-that-does-not-obscure-text-using-elegant-spacing",
-      "title": "Display birthday letter content with exact text: 'Hiii pondaatiyeeee ❣️✨ Happy birthdayyyy diii en thangooooo 😚💗💞 Unnai pathi solla neraya vishayam irukku di… 💕 Aana namakku naalaiku exam irukkuradhu nala, Enala mudinjadha oru chinna kutty surprise dhaan idhu unakkaga ✨💌 Nee dhaan en heart oda top la irukka koodiya ore queen 👑💖 Nee siricha podhum en world complete aagidum 🫀🌍 Be happy always… Keep smiling… En angel ah ippadiye irundha pothum 🥰❣️ 🫀 = 🌍 = 👑 = Nee dhan 💖✨ Forever yours, ~ Emikoooooo ❣️' on paper-textured background with subtle red lipstick kiss mark pattern that does not obscure text, using elegant spacing",
-      "reqIds": [
-        "REQ-5"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-use-google-fonts-for-romantic-typography-throughout-the-microsite-and-ensure-all-animations-are-smooth-and-optimized-for-mobile-device-performance",
-      "title": "Use Google Fonts for romantic typography throughout the microsite and ensure all animations are smooth and optimized for mobile device performance",
-      "reqIds": [
-        "REQ-6"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-visible-red-lipstick-kiss-mark-pattern-to-the-letter-background-that-decorates-the-paper-texture-without-obscuring-the-letter-text",
-      "title": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
-      "reqIds": [
-        "REQ-7"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-integrate-royalty-free-romantic-background-music-that-plays-after-the-envelope-opens",
-      "title": "Integrate royalty-free romantic background music that plays after the envelope opens",
-      "reqIds": [
-        "REQ-8"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-redesign-color-scheme-from-predominantly-pink-to-a-mature-romantic-aesthetic-with-varied-elegant-colors-including-reds-golds-deep-purples-and-whites-while-maintaining-romantic-feel",
-      "title": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
-      "reqIds": [
-        "REQ-9"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-enhance-firecracker-burst-animation-at-intro-screen-to-be-more-dramatic-and-realistic-with-particle-effects-and-sound",
-      "title": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
-      "reqIds": [
-        "REQ-10"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-add-animated-bouquet-giving-sequence-that-plays-after-the-question-flow-and-before-or-during-the-envelope-reveal",
-      "title": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
-      "reqIds": [
-        "REQ-11"
-      ],
-      "version": 1
-    },
-    {
-      "id": "feature-implement-flying-butterfly-animations-throughout-the-microsite-with-natural-flight-patterns-and-wing-movements",
-      "title": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
-      "reqIds": [
-        "REQ-12"
       ],
       "version": 1
     }
@@ -122,31 +51,30 @@
   "new_feature_requests": [
     {
       "id": "AR-1",
-      "summary": "Single HTML file romantic birthday microsite with animations, question flow, and music",
+      "summary": "Add crackers burst animation effect",
       "reqIds": [],
       "status": "pending"
     },
     {
       "id": "AR-2",
-      "summary": "Fix missing red lipstick kiss marks on letter background",
+      "summary": "Ensure letters are not camouflaged against background with proper contrast",
       "reqIds": [],
       "status": "pending"
     },
     {
       "id": "AR-3",
-      "summary": "Add royalty-free background music (currently missing)",
+      "summary": "Fill letters with kiss graphics that don't hide the text",
       "reqIds": [],
       "status": "pending"
     },
     {
       "id": "AR-4",
-      "summary": "Replace childish pink design with mature romantic aesthetic including crackers burst animation, bouquet giving animation, and flying butterflies",
+      "summary": "Fix butterflies to render as proper shapes instead of boxes",
       "reqIds": [],
       "status": "pending"
     }
   ],
-  "gameProjectType": "none",
-  "projectName": "Birthday Microsite",
+  "projectName": "Romantic Birthday",
   "clarification_mode": "instant",
   "clarification_rounds": 0
 }

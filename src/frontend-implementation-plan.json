@@ -1,107 +1,69 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Enhance romantic microsite with mature aesthetic, music, kiss marks, and animations",
+  "title": "Add crackers burst, improve letter contrast, add kiss pattern, fix butterfly rendering",
   "requirements": [
     {
-      "id": "REQ-7",
-      "summary": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
+      "id": "REQ-1",
+      "summary": "Add a crackers burst animation effect that plays at an appropriate moment in the experience",
       "acceptanceCriteria": [
-        "Red lipstick kiss marks are clearly visible on the letter background",
-        "Kiss marks are subtle enough to not interfere with text readability",
-        "Pattern appears on the paper-textured background beneath the letter text"
+        "Crackers burst animation is visible and plays at least once",
+        "Animation timing fits naturally within the existing flow",
+        "Visual effect is celebratory and matches the romantic theme"
       ],
       "file_operations": [
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Add CSS styles and SVG pattern definition for red lipstick kiss marks overlaying the letter background. Position kiss marks with appropriate opacity and z-index to maintain text readability while providing visible decoration on the paper texture."
+          "description": "Add crackers burst animation that triggers during the intro or at a transition moment. Implement using CSS animations or canvas-based particles to create a celebratory burst effect with confetti/crackers that matches the romantic pink theme. Position and time the animation to play naturally within the existing flow without disrupting the user experience."
         }
       ]
     },
     {
-      "id": "REQ-8",
-      "summary": "Integrate royalty-free romantic background music that plays after the envelope opens",
+      "id": "REQ-2",
+      "summary": "Ensure letter text has sufficient contrast against the background so it is clearly readable",
       "acceptanceCriteria": [
-        "Background music plays automatically after envelope opens",
-        "Music is royalty-free and suitable for romantic occasions",
-        "Music volume is set appropriately (around 25%)",
-        "Mute/unmute toggle controls work correctly"
+        "Letter text is clearly visible against pink gradient background",
+        "Text contrast meets readability standards",
+        "Text remains legible throughout all animations"
       ],
       "file_operations": [
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Add audio element with royalty-free romantic music source (e.g., from Free Music Archive or YouTube Audio Library), implement autoplay after envelope opens, set volume to 0.25, and add mute/unmute toggle button with icon in fixed position on screen."
+          "description": "Improve letter text contrast by adjusting text color, adding text shadow, or implementing a semi-transparent overlay behind the text within the letter area. Ensure the text remains clearly readable against the pink gradient background and any background patterns throughout all animation states."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
+      "id": "REQ-3",
+      "summary": "Fill the letter area with kiss graphics as a background pattern that does not obscure the text content",
       "acceptanceCriteria": [
-        "Color palette uses sophisticated romantic colors beyond just pink",
-        "Design feels mature and elegant rather than childish",
-        "Visual theme maintains romantic atmosphere without excessive pink dominance",
-        "Gradient backgrounds and UI elements use the updated color scheme"
+        "Kiss graphics appear as a subtle background pattern within the letter area",
+        "All letter text remains fully readable over the kiss pattern",
+        "Kiss graphics enhance rather than compete with the text"
       ],
       "file_operations": [
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Update CSS color variables and gradient definitions throughout the document. Replace pink-dominant gradients with sophisticated combinations of deep reds (#8B0000, #DC143C), rich golds (#FFD700, #DAA520), elegant purples (#4B0082, #6A0DAD), and clean whites (#FFFFFF, #FFF8F0). Apply to backgrounds, buttons, particles, and UI elements while maintaining visual hierarchy and romantic atmosphere."
+          "description": "Add kiss pattern background to the letter area using the generated image frontend/public/assets/generated/kiss-mark.dim_64x64.png. Implement as a repeating CSS background-image with reduced opacity to create a subtle pattern that enhances the romantic theme without obscuring the letter text. Ensure proper layering so text remains on top and fully readable."
         }
       ]
     },
     {
-      "id": "REQ-10",
-      "summary": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
+      "id": "REQ-4",
+      "summary": "Fix butterfly rendering so they display as proper butterfly shapes instead of boxes",
       "acceptanceCriteria": [
-        "Firecracker burst animation is prominent and visually impressive",
-        "Particles burst outward with realistic physics and timing",
-        "Animation plays immediately when intro screen loads",
-        "Burst effect precedes the 'Happy Birthday Angel' text reveal"
+        "Butterflies render as recognizable butterfly shapes",
+        "No box-like artifacts or placeholder shapes appear",
+        "Butterfly images load correctly and display smoothly"
       ],
       "file_operations": [
         {
           "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Enhance the existing firecracker animation with increased particle count, varied burst directions using radial patterns, realistic acceleration and deceleration physics, staggered timing for multiple bursts, and enhanced visual effects with glowing trails and color variations matching the mature color scheme (reds, golds, purples). Ensure animation triggers on page load before birthday text reveal."
-        }
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "summary": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
-      "acceptanceCriteria": [
-        "Animated bouquet appears and presents itself to the user",
-        "Animation shows a giving/presenting motion",
-        "Timing integrates smoothly between question flow and envelope sequence",
-        "Bouquet visual matches the mature romantic aesthetic"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Add bouquet animation sequence that displays the generated image frontend/public/assets/generated/bouquet.dim_800x800.png with slide-up and present motion using CSS transforms and keyframes. Position the animation to play after the final question is answered and before the envelope reveal begins. Include fade-in, scale-up, and gentle floating motion to create a romantic presentation effect."
-        }
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "summary": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
-      "acceptanceCriteria": [
-        "Multiple butterflies animate with realistic flying motion across screens",
-        "Butterfly wings flap naturally during flight",
-        "Flight paths are varied and organic (not linear)",
-        "Butterflies appear throughout different sections of the microsite",
-        "Animation performance is smooth on mobile devices"
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Create butterfly SVG elements with animated wings using CSS transforms for flapping motion. Implement multiple butterflies (3-5) with varied bezier curve flight paths across different screens (intro, questions, envelope, letter). Use CSS animations with random delays and durations for organic movement. Color butterflies to match the mature color scheme (deep purples, golds, reds). Optimize animation performance for mobile using transform and will-change properties."
+          "description": "Fix butterfly rendering by ensuring the butterfly images (frontend/public/assets/generated/butterfly-1.dim_200x200.png, butterfly-2.dim_200x200.png, butterfly-3.dim_200x200.png) load correctly with proper image paths and CSS styling. Remove any box-like placeholder styles, ensure transparent backgrounds are preserved, and verify images display as recognizable butterfly shapes with smooth animations."
         }
       ]
     }

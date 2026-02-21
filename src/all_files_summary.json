@@ -1,13 +1,13 @@
 {
-  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend with no implemented functionality.",
-  "feature_evidence.json": "Feature evidence report documenting six implemented romantic UI enhancements including kiss marks, background music, color scheme redesign, firecracker animations, bouquet sequence, and butterfly animations, all tracked to frontend/index.html.",
-  "frontend-file-summaries.txt": "JSON summary describing frontend/index.html as a complete standalone romantic birthday microsite and frontend/src/App.tsx as a minimal placeholder directing users to the HTML file.",
-  "frontend/index.css": "Tailwind CSS configuration with custom CSS variables defining light and dark theme color schemes using OKLCH color space for backgrounds, borders, and UI components.",
-  "frontend/index.html": "Self-contained romantic birthday microsite with mature dark aesthetic featuring firecracker animations, flying butterflies, bouquet presentation, kiss marks, background music, and sophisticated color palette (truncated content).",
-  "frontend/src/App.tsx": "Simple React component displaying a message instructing users to open the standalone index.html file to view the birthday microsite experience.",
-  "frontend/src/hooks/useActor.ts": "React hook managing backend actor creation with Internet Identity authentication, handling anonymous and authenticated actors, and invalidating dependent queries on identity changes.",
-  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient configuration with delegation validation (truncated content).",
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend canister with no implemented functionality.",
+  "feature_evidence.json": "Feature evidence report documenting four implemented features: crackers burst animation, text contrast improvements, kiss graphics background pattern, and butterfly rendering fixes, all with high confidence and mapped to frontend/index.html.",
+  "frontend-file-summaries.txt": "JSON summary describing frontend/index.html as a complete romantic birthday microsite with animations and effects, and frontend/src/App.tsx as a placeholder directing users to the standalone HTML file.",
+  "frontend/index.css": "Tailwind CSS configuration with custom CSS variables defining a comprehensive design system including color schemes for light and dark modes using OKLCH color space.",
+  "frontend/index.html": "Self-contained romantic birthday microsite HTML file with embedded styles and animations including floating particles, crackers burst effect, kiss patterns, and butterfly graphics (content truncated).",
+  "frontend/src/App.tsx": "React component displaying a message that directs users to open the standalone index.html file to view the birthday microsite experience.",
+  "frontend/src/hooks/useActor.ts": "React hook managing ICP backend actor creation with authentication support, automatically recreating actors when identity changes and invalidating dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient configuration with idle handling (content truncated).",
   "frontend/src/main.tsx": "React application entry point setting up QueryClient, InternetIdentityProvider, and rendering the root App component.",
-  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom OKLCH colors, container settings, border radius variables, animations, and plugins for typography and container queries.",
-  "project_state.json": "Project state tracking a romantic birthday microsite with intro animation, question flow, envelope reveal, and letter display. Known issues include missing kiss marks, background music problems, overly childish design, and missing firecracker/bouquet/butterfly animations."
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom colors using OKLCH color space, container settings, animations, and plugins for typography and container queries.",
+  "project_state.json": "Project state tracking for an interactive romantic birthday experience with crackers burst, kiss-filled letters, and butterfly animations. Contains four pending feature requests addressing visibility issues with letters and butterflies, plus requirements for proper contrast and rendering."
 }

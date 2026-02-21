@@ -1,142 +1,97 @@
 {
   "kind": "build_request",
-  "title": "Enhance romantic microsite with mature aesthetic, music, kiss marks, and animations",
-  "projectName": "Birthday Angel",
+  "title": "Add crackers burst, improve letter contrast, add kiss pattern, fix butterfly rendering",
+  "projectName": "Romantic Birthday",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-7",
-      "text": "Add visible red lipstick kiss mark pattern to the letter background that decorates the paper texture without obscuring the letter text",
+      "id": "REQ-1",
+      "text": "Add a crackers burst animation effect that plays at an appropriate moment in the experience (e.g., during intro or transition)",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-current"
         ],
         "quotes": [
-          "where is red lips kiss on the letter"
+          "I want crackers burst"
         ]
       },
       "acceptanceCriteria": [
-        "Red lipstick kiss marks are clearly visible on the letter background",
-        "Kiss marks are subtle enough to not interfere with text readability",
-        "Pattern appears on the paper-textured background beneath the letter text"
+        "Crackers burst animation is visible and plays at least once",
+        "Animation timing fits naturally within the existing flow",
+        "Visual effect is celebratory and matches the romantic theme"
       ]
     },
     {
-      "id": "REQ-8",
-      "text": "Integrate royalty-free romantic background music that plays after the envelope opens",
+      "id": "REQ-2",
+      "text": "Ensure letter text has sufficient contrast against the background so it is not camouflaged and remains clearly readable",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-current"
         ],
         "quotes": [
-          "where is...royalty free music"
+          "the letters must not be camouflaged in background"
         ]
       },
       "acceptanceCriteria": [
-        "Background music plays automatically after envelope opens",
-        "Music is royalty-free and suitable for romantic occasions",
-        "Music volume is set appropriately (around 25%)",
-        "Mute/unmute toggle controls work correctly"
+        "Letter text is clearly visible against pink gradient background",
+        "Text contrast meets readability standards",
+        "Text remains legible throughout all animations"
       ]
     },
     {
-      "id": "REQ-9",
-      "text": "Redesign color scheme from predominantly pink to a mature romantic aesthetic with varied elegant colors including reds, golds, deep purples, and whites while maintaining romantic feel",
+      "id": "REQ-3",
+      "text": "Fill the letter area with kiss graphics as a background pattern that does not obscure or hide the text content",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-current"
         ],
         "quotes": [
-          "I don't want it like this childish",
-          "not only full of pink"
+          "the letter must be filled with kisses that is in the background and does not hide words"
         ]
       },
       "acceptanceCriteria": [
-        "Color palette uses sophisticated romantic colors beyond just pink",
-        "Design feels mature and elegant rather than childish",
-        "Visual theme maintains romantic atmosphere without excessive pink dominance",
-        "Gradient backgrounds and UI elements use the updated color scheme"
+        "Kiss graphics appear as a subtle background pattern within the letter area",
+        "All letter text remains fully readable over the kiss pattern",
+        "Kiss graphics enhance rather than compete with the text"
       ]
     },
     {
-      "id": "REQ-10",
-      "text": "Enhance firecracker burst animation at intro screen to be more dramatic and realistic with particle effects and sound",
+      "id": "REQ-4",
+      "text": "Fix butterfly rendering so they display as proper butterfly shapes instead of boxes",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-current"
         ],
         "quotes": [
-          "I want the bursting of crackers"
+          "the butterflies must not be boxes"
         ]
       },
       "acceptanceCriteria": [
-        "Firecracker burst animation is prominent and visually impressive",
-        "Particles burst outward with realistic physics and timing",
-        "Animation plays immediately when intro screen loads",
-        "Burst effect precedes the 'Happy Birthday Angel' text reveal"
-      ]
-    },
-    {
-      "id": "REQ-11",
-      "text": "Add animated bouquet giving sequence that plays after the question flow and before or during the envelope reveal",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "an animation of giving boquet"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Animated bouquet appears and presents itself to the user",
-        "Animation shows a giving/presenting motion",
-        "Timing integrates smoothly between question flow and envelope sequence",
-        "Bouquet visual matches the mature romantic aesthetic"
-      ]
-    },
-    {
-      "id": "REQ-12",
-      "text": "Implement flying butterfly animations throughout the microsite with natural flight patterns and wing movements",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "i want butterfly to fly"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Multiple butterflies animate with realistic flying motion across screens",
-        "Butterfly wings flap naturally during flight",
-        "Flight paths are varied and organic (not linear)",
-        "Butterflies appear throughout different sections of the microsite",
-        "Animation performance is smooth on mobile devices"
+        "Butterflies render as recognizable butterfly shapes",
+        "No box-like artifacts or placeholder shapes appear",
+        "Butterfly images load correctly and display smoothly"
       ]
     }
   ],
   "constraints": [
-    "Maintain single-file index.html architecture",
-    "Preserve existing letter text content exactly as specified",
-    "Keep mobile-responsive design and touch interactions",
-    "Ensure all animations remain smooth on mobile devices",
-    "Use only royalty-free music sources"
+    "Do not change the backend implementation",
+    "Maintain existing pink gradient background",
+    "Preserve existing music controls and interactive question flow",
+    "Keep the romantic birthday microsite theme intact"
   ],
   "nonGoals": [
-    "Changing the four-question flow structure",
-    "Modifying the envelope opening mechanism",
-    "Altering the letter text content",
-    "Adding external dependencies or frameworks",
-    "Creating multi-page navigation"
+    "Changing the overall color scheme from pink",
+    "Modifying the core question/answer flow logic",
+    "Adding new interactive features beyond requested fixes",
+    "Redesigning the envelope reveal animation"
   ],
   "imageRequirements": {
     "required": [
-      "Elegant bouquet of roses illustration in mature romantic style with reds, whites and gold accents (bouquet.dim_800x800.png)"
+      "Decorative kiss mark icon in romantic style suitable for pattern background (kiss-mark.dim_64x64.png)"
     ],
     "edits": []
   }
